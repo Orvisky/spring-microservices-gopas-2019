@@ -1,7 +1,8 @@
 package com.gopas.castleregister.application.restapi;
 
-import com.gopas.castleregister.domain.model.Owner;
-import com.gopas.castleregister.domain.model.OwnerRepository;
+import com.gopas.castleregister.application.event.ExternalCastleCreatedEvent;
+import com.gopas.castleregister.domain.model.*;
+import com.gopas.castleregister.infrastructure.messaging.CastleEventGateway;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,7 +21,13 @@ public class CastleRegisterRestApi {
     private OwnerRepository ownerRepository;
 
     @Autowired
+    private CastleRepository castleRepository;
+
+    @Autowired
     private ModelMapper modelMapper;
+
+    @Autowired
+    CastleEventGateway castleEventGateway;
 
     @RequestMapping(path = "/owner", method = RequestMethod.POST, consumes = {"application/json"}, produces = {"application/json"})
     public ResponseEntity createOwner(@RequestBody @NotNull @Valid OwnerDTO ownerDTO) {
@@ -35,6 +42,28 @@ public class CastleRegisterRestApi {
     @RequestMapping(path = "/owner/{id}", method = RequestMethod.GET, consumes = {"application/json"}, produces = {"application/json"})
     public OwnerDTO getOwner(@PathVariable String id) {
         return modelMapper.map(ownerRepository.findById(UUID.fromString(id)), OwnerDTO.class);
+    }
+
+    @RequestMapping(path = "/castle", method = RequestMethod.POST, consumes = {"application/json"}, produces = {"application/json"})
+    public ResponseEntity createCastle(@RequestBody @NotNull @Valid CastleDTO castleDTO) {
+        Castle castle = new Castle(
+                UUID.fromString(castleDTO.id),
+                castleDTO.name
+        );
+
+        castle.setAddress(castleDTO.address);
+        castle.setCapacity(castleDTO.capacity);
+        castle.setCastleLocation(new CastleLocation(castleDTO.lat, castleDTO.lon));
+        castle.setCastleRoutes(null);
+        castle.setDescription(castleDTO.description);
+
+        castleRepository.createCastle(castle);
+
+        castleEventGateway.sendCastleCreatedEvent(
+                modelMapper.map(castleDTO, ExternalCastleCreatedEvent.class)
+        );
+
+        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
     }
 
 }
