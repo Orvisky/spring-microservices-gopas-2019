@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="490d4198-4572-4b87-9813-378eb35736fd" name="Default Changelist" comment="" />
+    <list default="true" id="490d4198-4572-4b87-9813-378eb35736fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../castleapigtw/src/main/java/com/gopas/castleapigtw/RoutingConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../castleapigtw/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../castleregister/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregister/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../castleregister/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregister/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../castleregistergtw/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregistergtw/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../castleregistergtw/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregistergtw/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../configserver/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../configserver/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../configserver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../configserver/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -57,7 +68,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -67,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -134,7 +145,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569412125495" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569413440266" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -198,7 +209,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
