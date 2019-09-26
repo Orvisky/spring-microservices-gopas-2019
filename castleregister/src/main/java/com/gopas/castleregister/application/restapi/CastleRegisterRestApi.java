@@ -66,4 +66,24 @@ public class CastleRegisterRestApi {
         return ResponseEntity.status(HttpStatus.ACCEPTED).build();
     }
 
+    /*
+    @RequestMapping(consumes={"application/json"}, value="/castle", method= RequestMethod.POST )
+    public ResponseEntity<Void> createCastle(@RequestBody @NotNull @Valid CastleDTO castleDTO){
+        Castle castle = new Castle(UUID.fromString(castleDTO.id),
+                castleDTO.name,
+                new CastleLocation(castleDTO.latitude, castleDTO.longitude),
+                castleDTO.description,
+                castleDTO.address,
+                castleDTO.webPage,
+                castleDTO.foto,
+                castleDTO.capacity);
+        castle.setCastleRepository(castleRepository);
+        castle.setDomainEventPublisher(domainEventPublisher);
+        castle.create();
+//        castleRepository.createCastle(castle);
+//        castleEventGateway.sendCastleCreatedEvent(modelMapper.map(castleDTO, ExternalCastleCreatedEvent.class));
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+    */
+
 }

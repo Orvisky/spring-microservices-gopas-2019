@@ -1,5 +1,9 @@
 package com.gopas.castleregister.domain.model;
 
+import com.gopas.castleregister.domain.event.CastleCreatedEvent;
+import com.gopas.castleregister.domain.event.DomainEventPublisher;
+import com.gopas.castleregister.domain.event.GenericEvent;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +35,9 @@ public class Castle {
 
     @Transient
     private CastleRouteRepository castleRouteRepository;
+
+    @Transient
+    private DomainEventPublisher domainEventPublisher;
 
     public Castle() {
 
@@ -144,4 +151,22 @@ public class Castle {
         this.castleRouteRepository.createCastleRoute(castleRoute);
 
     }
+
+    /*
+    public void create(){
+        castleRepository.createCastle(this);
+        CastleCreatedEvent castleCreatedEvent = new CastleCreatedEvent(id.toString(),
+                name,
+                null,
+                location.getLongitude(),
+                location.getLatitude(),
+                description,
+                address,
+                webPage,
+                foto,
+                capacity);
+        GenericEvent<CastleCreatedEvent> event = new GenericEvent<>(castleCreatedEvent);
+        domainEventPublisher.fireEvent(event);
+    }
+    */
 }

@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad2f7c9f-e7e1-4d29-a64d-74c0d26f8d0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/MessageChanelConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/application/event/ExternalCastleCreatedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/application/restapi/CastleDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/infrastructure/messaging/CastleEventGateway.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/infrastructure/messaging/MessageChanelInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/infrastructure/messaging/PublisherCastleInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/infrastructure/messaging/PublisherCastleInterfaceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../castlereservation/src/main/java/com/gopas/castlereservation/infrastructure/messaging/SubscriberCastleImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../castlereservation/src/main/java/com/gopas/castlereservation/infrastructure/messaging/SubscriberCastleInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../castleregister/.idea/modules/com.gopas.castleregister.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregister/.idea/modules/com.gopas.castleregister.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../castleregister/.idea/modules/com.gopas.castleregister.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregister/.idea/modules/com.gopas.castleregister.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../castleregister/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregister/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/domain/event/CastleCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/domain/event/DomainEventPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/domain/event/GenericEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../castleregister/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregister/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../castleregister/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregister/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../castleregister/out/production/classes/com/gopas/castleregister/application/restapi/CastleRegisterRestApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregister/out/production/classes/com/gopas/castleregister/application/restapi/CastleRegisterRestApi.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/application/restapi/CastleRegisterRestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/application/restapi/CastleRegisterRestApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/domain/model/Castle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregister/src/main/java/com/gopas/castleregister/domain/model/Castle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../castleregistergtw/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../castleregistergtw/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../serviceregistry/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../serviceregistry/.idea/workspace.xml" afterDir="false" />
@@ -170,7 +160,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569420991113" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569483173471" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
