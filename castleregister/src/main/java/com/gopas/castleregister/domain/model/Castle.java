@@ -3,6 +3,8 @@ package com.gopas.castleregister.domain.model;
 import com.gopas.castleregister.domain.event.CastleCreatedEvent;
 import com.gopas.castleregister.domain.event.DomainEventPublisher;
 import com.gopas.castleregister.domain.event.GenericEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,6 +13,8 @@ import java.util.UUID;
 
 @Entity
 public class Castle {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(Castle.class.getName());
 
     private @Id
     UUID id;
