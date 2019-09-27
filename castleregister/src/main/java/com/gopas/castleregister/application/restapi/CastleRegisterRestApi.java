@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -34,6 +35,7 @@ public class CastleRegisterRestApi {
     CastleEventGateway castleEventGateway;
 
     @RequestMapping(path = "/owner", method = RequestMethod.POST, consumes = {"application/json"}, produces = {"application/json"})
+    @PreAuthorize("hasRole('ROLE_READER')")
     public ResponseEntity createOwner(@RequestBody @NotNull @Valid OwnerDTO ownerDTO) {
 
         LOGGER.info("Going to create owner: {}", ownerDTO);
